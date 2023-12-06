@@ -15,7 +15,7 @@ public class NaNHealthFixer {
     public NaNHealthFixer() {
         final IEventBus bus = MinecraftForge.EVENT_BUS;
         bus.addListener((LivingDeathEvent event) -> validateHealth(event));
-        bus.addListener((LivingEvent.LivingUpdateEvent event) -> validateHealth(event));
+        bus.addListener((LivingEvent.LivingTickEvent event) -> validateHealth(event));
         bus.addListener((LivingHurtEvent event) -> {
             validateHealth(event);
             if (Float.isNaN(event.getAmount())) event.setCanceled(true);
@@ -23,7 +23,7 @@ public class NaNHealthFixer {
     }
 
     private void validateHealth(@NotNull LivingEvent event) {
-        LivingEntity entity = event.getEntityLiving();
+        LivingEntity entity = event.getEntity();
         if (entity.level.isClientSide) return;
         float health = entity.getHealth();
         if (Float.isNaN(health) || health < 0.0F) entity.setHealth(0.0F);
