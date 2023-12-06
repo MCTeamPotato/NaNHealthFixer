@@ -1,0 +1,12 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "MIT"
+
+[[mods]]
+modId = "nanhealthfixer"
+version = "${version}"
+displayName = "NaNHealthFixer"
+authors = "TeamPotato"
+description = '''
+A Minecraft Mod.
+'''
