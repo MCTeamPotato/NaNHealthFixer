@@ -24,7 +24,7 @@ public class NaNHealthFixer {
 
     private void validateHealth(@NotNull LivingEvent event) {
         LivingEntity entity = event.getEntity();
-        if (entity.level.isClientSide) return;
+        if (entity.level().isClientSide) return;
         float health = entity.getHealth();
         if (Float.isNaN(health) || health < 0.0F) entity.setHealth(0.0F);
     }
