@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "nanhealthfixer",
+    "name": "NaNHealthFixer",
+    "description": "",
+    "version": "${version}",
+    "mcversion": "1.12.2",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "teampotato"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
