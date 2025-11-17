@@ -1,12 +1,13 @@
 modLoader = "javafml"
-loaderVersion = "[1,)"
+loaderVersion = "[36,)"
+#issueTrackerURL = ""
 license = "MIT"
 
 [[mods]]
 modId = "nanhealthfixer"
 version = "${version}"
 displayName = "NaNHealthFixer"
-authors = "TeamPotato"
+authors = "Kall"
 description = '''
-A Minecraft Mod.
 '''
+#logoFile = ""
